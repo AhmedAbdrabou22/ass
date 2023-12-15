@@ -1,5 +1,7 @@
+import { useTranslation } from 'react-i18next'
 import img from '../assets/19983.png'
 function CardandImgleft() {
+  const [t , i18n] = useTranslation()
   return (
     <div className="container my-5 d-flex align-items-center flex-column-reverse flex-md-row  Nowrap">
     
@@ -8,8 +10,8 @@ function CardandImgleft() {
 </div>
     <div className="card border-2 mr border-primary divCard col-12 col-md-8 " style={{borderRadius:'20px',fontFamily:'monospace',padding:'80px 50px'}}>
   <div className="card-body">
-    <h2 className="card-title fs-1 ">Card title</h2>
-    <p className="card-text h4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h2 className="card-title fs-1 ">{t('vision')}</h2>
+    <p className="card-text h4">{t('infoVision')}</p>
 
   </div>
 </div>

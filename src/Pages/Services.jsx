@@ -1,13 +1,15 @@
+import { useTranslation } from "react-i18next"
 import ButtonContactUs from "../components/ButtonContactUs"
 import CardandImgleft from "../components/CardandImgLeft"
 import CardandImgRight from "../components/CardandImgRight"
 
 const Services = () => {
+    const [t , i18n] = useTranslation()
     return (
         <div className="overflow-hidden">
             <div className='w-75 mx-auto text-center mt-5'>
-                <h2 style={{ textAlign: "center" }} className='infoAbout'>Our Services</h2>
-                <p style={{ color: "#585858", marginTop: "10px" }}>We provide you with a wide range of service in the fields of audit, assurance, accounting, taxation, investment, and incorporation of new companies with a competitive fee.</p>
+                <h2 style={{ textAlign: "center" }} className='infoAbout'>{t('services')}</h2>
+                <p style={{ color: "#585858", marginTop: "10px" }}>{t('infoServices')}</p>
 
             </div>
             <CardandImgRight/>

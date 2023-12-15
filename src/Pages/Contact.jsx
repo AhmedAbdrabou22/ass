@@ -1,21 +1,21 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EBlog from "../components/EBlog";
+import { useTranslation } from "react-i18next";
 const Contact = () => {
+  const [t , i18n] = useTranslation()
   return (
     <div>
       <section className="col-lg-8 col-sm-12 mx-auto mb-5 mt-5">
         <h1 className="text-center" style={{ color: "#585858" }}>
-          Contact Us
+          {t('contactUS')}
         </h1>
         <p className="text-center" style={{ color: "#292929" }}>
-          Tax Hub sees itself as a partner to each of its clients - supporting
-          and providing reliable and intelligent business solutions and
-          maintaining dynamic professional relationship.
+          {t('infoContactUs')}
         </p>
         <form className="col-9 rounded-4 border m-auto mt-5 p-3 row">
           <div className="col-lg-6 col-md-6 col-sm-12">
             <label htmlFor="Name" className="fw-bold">
-              Name <span style={{ color: "#FA0000" }}>*</span>
+            {t('name')} <span style={{ color: "#FA0000" }}>*</span>
             </label>
             <input
               className="rounded border form-control mt-2 py-2 "
@@ -25,7 +25,7 @@ const Contact = () => {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 ">
             <label htmlFor="Title" className="fw-bold">
-              Title
+            {t('Title')}
             </label>
             <input
               className="rounded border form-control mt-2 py-2"
@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 my-2">
             <label htmlFor="email" className="fw-bold">
-              Email <span style={{ color: "#FA0000" }}>*</span>
+            {t('email')} <span style={{ color: "#FA0000" }}>*</span>
             </label>
             <input
               type="email"
@@ -45,7 +45,7 @@ const Contact = () => {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 my-2">
             <label htmlFor="Name" className="fw-bold">
-              Subject
+            {t('subject')}
             </label>
             <input
               className="rounded border form-control mt-2 py-2"
@@ -55,7 +55,7 @@ const Contact = () => {
           </div>
           <div className="col-12 my-2">
             <label htmlFor="Message" className="fw-bold">
-              Message
+            {t('message')}
             </label>
             <textarea
               className="form-control rounded border mt-2"
@@ -69,7 +69,7 @@ const Contact = () => {
               className="py-2 col-xl-4 col-sm-6 col-9 border-0 text-white fw-bold rounded-5 center"
               style={{ backgroundColor: "#0062FF" }}
             >
-              Send now
+              {t('send')}
             </button>
           </div>
         </form>
@@ -81,9 +81,9 @@ const Contact = () => {
           width="600"
           height="450"
           style={{ border: 0 }}
-          allowfullscreen=""
+          // allowfullscreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          // referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <section className="col-10 mx-auto mb-5  ">
@@ -93,7 +93,7 @@ const Contact = () => {
               className="fs-1 fas fa-phone my-4"
               style={{ color: "#0062FF" }}
             />
-            <h4 className="my-3">Phone</h4>
+            <h4 className="my-3">{t('phone')}</h4>
             <h6 className="mt-2">020225254487</h6>
           </div>
           <div className="col-lg-3 bg-light  col-md-5 col-10 p-3 rounded-4 border border-primary text-center mt-3">
@@ -101,7 +101,7 @@ const Contact = () => {
               className="fs-1 fas fa-envelope my-4"
               style={{ color: "#0062FF" }}
             />
-            <h4 className="my-3">Email</h4>
+            <h4 className="my-3">{t('email')}</h4>
             <h6 className="mt-3">info@kbs.com.eg</h6>
           </div>
           <div className="col-lg-3 bg-light  col-md-5 col-10 p-3 rounded-4 border border-primary text-center mt-3">
@@ -109,10 +109,9 @@ const Contact = () => {
               className="fs-1 fas fa-tenge my-4"
               style={{ color: "#0062FF" }}
             />
-            <h4 className="my-3">Office</h4>
+            <h4 className="my-3">{t('Office')}</h4>
             <h6 className="my-3">
-              Headquarter: 30 Misr Helwan Road, Maadi .EgyptBranch: Greek Campus
-              office106 El Tahrir Square.
+            {t('address')}
             </h6>
           </div>
         </div>

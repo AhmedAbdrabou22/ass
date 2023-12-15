@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import Blog from "./Blog";
+import { useTranslation } from "react-i18next";
 
 function EBlog() {
+  const [t , i18n] = useTranslation()
   return (
     <div className="col-10 m-auto">
-      <h2 className="ms-2 my-4 ">Explore our Latest Blogs</h2>
+      <h2 className="ms-2 my-4 ">{t('exploreBlogs')}</h2>
       <div className="d-flex justify-content-between col-12 flex-wrap">
         <div className="col-12 col-md-6 col-xl-4 p-2">
           <Blog />
